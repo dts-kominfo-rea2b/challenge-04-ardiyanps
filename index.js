@@ -8,45 +8,22 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const parse = (number) => {
-  parseDate = Date.parse(number) / 1000;
-  stringDate = parseDate;
-  return stringDate;
-}
+const createDate = (x, no) => {
+  const sort = [];
+    for (let i = 0 ; i < dates.length ; i++){
+      const dateString = (new Date(x[i]).getTime() / 1000).toString(); 
+      sort.push(dateString);
+    };
 
-const createDate = (x, number) => {
-  let sorting = x.sort();
-  for (const i of sorting) {
-    if (number == 0) {
-      parse(number);
-      break;
-    } else if (number == 1) {
-      parse(number);
-      break;
-    } else if (number == 2) {
-      parse(number);
-      break;
-    } else if (number == 3) {
-      parse(number);
-      break;
-    } else if (number == 4) {
-      parse(number);
-      break;
-    } else {
-      joinDate = [];
-      for (const i of x) {
-        parseDate = Date.parse(i) / 1000;
-        stringDate = parseDate.toString();
-        joinDate.push(stringDate);
-      }
-      joinedData = joinDate.join("-");
-      return joinedData;
-    }
-  }
-}
-
+    if (no === undefined){
+      sort.sort((x, y) => x - y);
+        return sort.join("-");
+     } else {
+        sort.sort((x, y) => x + y);
+        return sort[no];
+     }
+};
 createDate(dates);
-
 
 // ! JANGAN DIMODIFIKASI
 (() => {
