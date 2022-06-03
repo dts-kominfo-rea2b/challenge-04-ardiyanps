@@ -8,7 +8,40 @@ const dates = [
 ];
 
 // TODO: Buatlah fungsi createDate
-const createDate = null;
+const parse = (number) => {
+  parseDate = Date.parse(number) / 1000;
+  console.log(parseDate.toString());
+}
+
+const createDate = (x, number) => {
+  let sorting = x.sort();
+  for (const i of sorting) {
+    if (number == 0) {
+      parse(number);
+      break;
+    } else if (number == 1) {
+      parse(number);
+      break;
+    } else if (number == 2) {
+      parse(number);
+      break;
+    } else if (number == 3) {
+      parse(number);
+      break;
+    } else if (number == 4) {
+      parse(number);
+      break;
+    } else {
+      for (const i of x) {
+      parse(i);
+      }
+      break;
+    }
+  }
+}
+
+createDate(dates);
+
 
 // ! JANGAN DIMODIFIKASI
 (() => {
