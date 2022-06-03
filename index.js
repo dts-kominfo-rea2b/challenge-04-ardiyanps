@@ -10,7 +10,8 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const parse = (number) => {
   parseDate = Date.parse(number) / 1000;
-  console.log(parseDate.toString());
+  stringDate = parseDate;
+  return stringDate;
 }
 
 const createDate = (x, number) => {
@@ -32,10 +33,14 @@ const createDate = (x, number) => {
       parse(number);
       break;
     } else {
+      joinDate = [];
       for (const i of x) {
-      parse(i);
+        parseDate = Date.parse(i) / 1000;
+        stringDate = parseDate.toString();
+        joinDate.push(stringDate);
       }
-      break;
+      joinedData = joinDate.join("-");
+      return joinedData;
     }
   }
 }
